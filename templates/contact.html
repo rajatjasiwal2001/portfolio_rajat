@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Portfolio{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-5">Get In Touch</h1>
+                <p class="text-center lead mb-5">I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-envelope fa-3x text-primary"></i>
+                    </div>
+                    <h5>Email</h5>
+                    <p>rajat.jaiswalmgs2@gmail.com</p>
+                    <a href="mailto:rajat.jaiswalmgs2@gmail.com" class="btn btn-outline-primary btn-sm">Send Email</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-phone fa-3x text-success"></i>
+                    </div>
+                    <h5>Phone</h5>
+                    <p>7081156813</p>
+                    <a href="{{ url_for('make_call', number='7081156813') }}" class="btn btn-outline-success btn-sm">Call Now</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="contact-icon mb-3">
+                        <i class="fab fa-whatsapp fa-3x text-success"></i>
+                    </div>
+                    <h5>WhatsApp</h5>
+                    <p>7081156813</p>
+                    <a href="{{ url_for('whatsapp_message', number='7081156813') }}" class="btn btn-outline-success btn-sm">Message</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <h5 class="mb-3">Follow Me</h5>
+                <div class="social-links">
+                    <a href="#" class="btn btn-outline-primary me-2 mb-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="btn btn-outline-info me-2 mb-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="btn btn-outline-danger me-2 mb-2">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="btn btn-outline-success me-2 mb-2">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_head %}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}

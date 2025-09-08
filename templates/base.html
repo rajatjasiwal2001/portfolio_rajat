@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top enhanced-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <i class="fas fa-code me-2"></i>
+                <span class="brand-text">Portfolio</span>
+            </a>
+            
+            <!-- Search Bar -->
+            <div class="navbar-search d-none d-lg-flex">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search Google...">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <i class="fas fa-user me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projects') }}">
+                            <i class="fas fa-code me-1"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('skills') }}">
+                            <i class="fas fa-lightbulb me-1"></i>Skills
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="{{ url_for('home') }}" class="text-light text-decoration-none">
+                                <i class="fas fa-home me-2"></i>Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('about') }}" class="text-light text-decoration-none">
+                                <i class="fas fa-user me-2"></i>About
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('projects') }}" class="text-light text-decoration-none">
+                                <i class="fas fa-code me-2"></i>Projects
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('skills') }}" class="text-light text-decoration-none">
+                                <i class="fas fa-lightbulb me-2"></i>Skills
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <a href="mailto:rajat.developer@example.com" class="text-light text-decoration-none">
+                                rajat.jaiswalmgs2@gmail.com
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2 text-success"></i>
+                            <a href="{{ url_for('make_call', number='7081156813') }}" class="text-light text-decoration-none">
+                                7081156813
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-warning"></i>
+                            <span class="text-light">Varanasi,Uttar Pradesh</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fab fa-whatsapp me-2 text-success"></i>
+                            <a href="{{ url_for('whatsapp_message', number='7081156813') }}" class="text-light text-decoration-none">
+                                WhatsApp Chat
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+<div class="col-lg-3 col-md-6 mb-4">
+    <h5 class="text-white mb-3">Follow Me</h5>
+    <div class="social-links d-flex flex-wrap">
+        <a href="https://github.com/rajatjasiwal2001" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-github fa-lg"></i>
+            <span class="ms-1">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/rajat-jaiswal-998ba7219" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-linkedin fa-lg"></i>
+            <span class="ms-1">LinkedIn</span>
+        </a>
+        <a href="https://twitter.com/@RajatJa43310376" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-twitter fa-lg"></i>
+            <span class="ms-1">Twitter</span>
+        </a>
+        <a href="https://instagram.com/rajatjaiswal1020" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-instagram fa-lg"></i>
+            <span class="ms-1">Instagram</span>
+        </a>
+        <a href="https://youtube.com/@RajatJaiswal-t9t" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-youtube fa-lg"></i>
+            <span class="ms-1">YouTube</span>
+        </a>
+        <a href="https://medium.com/@rajat.jaiswalmgs2@gmail.com" target="_blank" class="social-link me-3 mb-2">
+            <i class="fab fa-medium fa-lg"></i>
+            <span class="ms-1">Medium</span>
+        </a>
+    </div>
+</div>
+
+
+  <!-- Tech Stack & Newsletter Section -->
+<section class="tech-newsletter py-5 bg-gradient text-light">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Tech Stack -->
+        <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+          <h5 class="mb-3"><i class="fas fa-code me-2 text-warning"></i>Tech Stack</h5>
+          <div class="tech-stack">
+            <span class="badge bg-primary shadow-sm">Python</span>
+            <span class="badge bg-success shadow-sm">Flask</span>
+            <span class="badge bg-warning text-dark shadow-sm">REST API</span>
+            <span class="badge bg-info text-dark shadow-sm">Bootstrap</span>
+            <span class="badge bg-danger shadow-sm">HTML5</span>
+            <span class="badge bg-secondary shadow-sm">CSS3</span>
+            <span class="badge bg-dark shadow-sm">JavaScript</span>
+            <span class="badge bg-primary shadow-sm">MySQL</span>
+            <span class="badge bg-danger shadow-sm">AWS</span>
+            <span class="badge bg-info text-dark shadow-sm">Figma</span>
+            <span class="badge bg-success shadow-sm">Linux</span>
+            <span class="badge bg-warning text-dark shadow-sm">FastAPI</span>
+            <span class="badge bg-dark shadow-sm">Responsive Design</span>
+          </div>
+        </div>
+  
+        <!-- Newsletter -->
+        <div class="col-lg-4 col-md-5">
+          <h6 class="mb-2"><i class="fas fa-envelope me-2 text-info"></i>Get Updates</h6>
+          <p class="small">Follow for latest projects and tech insights</p>
+          <form class="d-flex">
+            <input type="email" class="form-control me-2" placeholder="Enter email">
+            <button class="btn btn-warning" type="submit">Subscribe</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+            <!-- Footer Bottom -->
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">
+                        &copy; 2025 <strong>Rajat's Portfolio</strong>. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links">
+                      <a href="/privacy-policy.html" class="text-muted text-decoration-none me-3 small">Privacy Policy</a>
+                      <a href="/terms-of-service.html" class="text-muted text-decoration-none me-3 small">Terms of Service</a>
+                      <a href="/sitemap.xml" class="text-muted text-decoration-none small">Sitemap</a>
+                    </div>
+                  </div>
+                  
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header">
+            <div class="chatbox-title">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+            </div>
+            <div class="chatbox-controls">
+                <button id="minimizeChat" class="chatbox-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button id="closeChat" class="chatbox-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chatbox-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbox-input">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-group">
+                        <input type="text" id="chatInput" class="form-control" placeholder="Type your message..." autocomplete="off">
+                        <button type="submit" class="btn btn-primary" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="quick-actions">
+                    <button class="quick-btn" data-message="Tell me about your projects">
+                        <i class="fas fa-code"></i> Projects
+                    </button>
+                    <button class="quick-btn" data-message="How can I contact you?">
+                        <i class="fas fa-envelope"></i> Contact
+                    </button>
+                    <button class="quick-btn" data-message="What technologies do you use?">
+                        <i class="fas fa-cogs"></i> Skills
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Search Results Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content search-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-search me-2"></i>
+                        Search Results
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults">
+                        <div class="search-loading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p class="mt-2">Searching for answers...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="googleSearchBtn">
+                        <i class="fab fa-google me-1"></i>Search on Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button id="chatToggle" class="chat-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification" id="chatNotification">1</span>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

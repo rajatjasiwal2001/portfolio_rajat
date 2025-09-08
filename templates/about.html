@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}About - Portfolio{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5 about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="text-center mb-5 text-white">About Me</h1>
+                
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 text-center">
+                        <div class="profile-image mb-4">
+                            <div class="profile-placeholder-large">
+                                <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Rajat Jaiswal" class="img-fluid rounded-circle shadow">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-8 text-white">
+                        <h3>Hello, I'm a Python Full Stack Developer</h3>
+                        <p class="lead">Passionate about creating innovative solutions and beautiful user experiences.</p>
+                        <p>I have a strong background in Full Web Development with expertise in modern technologies. I love turning complex problems into simple, beautiful, and intuitive designs.</p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-md-6 mb-4">
+                        <h4>Education</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-graduation-cap text-primary me-2"></i>Bachelor in Electrical Engineering </li>
+                            <li><i class="fas fa-graduation-cap text-info me-2"></i>Diploma in Electrical Engineering</li>
+                            <li><i class="fas fa-university text-warning me-2"></i>Intermediate</li>
+                            <li><i class="fas fa-school text-success me-2"></i>High School</li>
+                            <li><i class="fas fa-certificate text-danger me-2"></i>C++ Certification</li>
+                            <li><i class="fas fa-certificate text-light me-2"></i>Speaking Certification</li>
+                            <li><i class="fas fa-certificate text-success me-2"></i>Full Stack Development Certification</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h4>Experience</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-briefcase text-info me-2"></i>One Year Training in Python Full Stack Development</li>
+                            <li><i class="fas fa-code text-warning me-2"></i>Internship - TECHPATH</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-5 text-white">
+                    <h4>What I Do</h4>
+                    <div class="row">
+                        <!-- ATM System -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 shadow-lg border-0">
+                                <img src="{{ url_for('static', filename='images/atm.png') }}" 
+                                     class="card-img-top" alt="ATM System">
+                                <div class="card-body text-center">
+                                    <h5>ATM System (OOPs Concept)</h5>
+                                    <p>Building responsive and interactive Python Based Concept OOPs Projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- To-Do Management -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 shadow-lg border-0">
+                                <img src="{{ url_for('static', filename='images/todo.png') }}" 
+                                     class="card-img-top" alt="To-Do Management">
+                                <div class="card-body text-center">
+                                    <h5>To-Do Management System</h5>
+                                    <p>Creating task management apps with Flask for productivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Student Result Management -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 shadow-lg border-0">
+                                <img src="{{ url_for('static', filename='images/student.png') }}" 
+                                     class="card-img-top" alt="Student Result Management">
+                                <div class="card-body text-center">
+                                    <h5>Student Result Management</h5>
+                                    <p>Designing intuitive Flask-based student performance dashboards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_head %}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+/* Background Motion */
+.about-section {
+    position: relative;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Cards hover */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.2);
+}
+</style>
+{% endblock %}

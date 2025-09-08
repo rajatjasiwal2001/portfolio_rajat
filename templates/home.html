@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center">
+    <!-- Tech Background Elements -->
+    <div class="tech-background">
+        <div class="matrix-bg"></div>
+        <div class="circuit-overlay"></div>
+        <div class="floating-code">&lt;div class="portfolio"&gt;</div>
+        <div class="floating-code">function create() {</div>
+        <div class="floating-code">import React from 'react';</div>
+        <div class="floating-code">@app.route('/')</div>
+        <div class="floating-code">SELECT * FROM projects;</div>
+    </div>
+    
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-white mb-4" id="hero-title">Welcome to My Portfolio</h1>
+                <p class="lead text-white mb-4">I'm a Passionate Python Full Stack Developer creating amazing digital experiences.</p>
+                <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg me-3">View My Work</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get In Touch</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image text-center">
+                    <div class="profile-placeholder">
+                        <img src="{{ url_for('static', filename='images/profile.png') }}" 
+                             alt="Rajat Jaiswal" 
+                             class="img-fluid rounded-circle shadow">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-5 skills-section bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="mb-5">⚡ Skills & Technologies</h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- Python -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-python fa-3x text-primary mb-3"></i>
+                    <h5>Python</h5>
+                </div>
+            </div>
+            <!-- Django -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                    <h5>RestApi</h5>
+                </div>
+            </div>
+            <!-- Flask -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fas fa-fire fa-3x text-danger mb-3"></i>
+                    <h5>Flask</h5>
+                </div>
+            </div>
+            <!-- JavaScript -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                    <h5>JavaScript (ES6+)</h5>
+                </div>
+            </div>
+            <!-- React -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-react fa-3x text-info mb-3"></i>
+                    <h5>React.js</h5>
+                </div>
+            </div>
+            <!-- HTML5 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                    <h5>HTML5</h5>
+                </div>
+            </div>
+            <!-- CSS3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
+                    <h5>CSS3</h5>
+                </div>
+            </div>
+            <!-- Database -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fas fa-database fa-3x text-secondary mb-3"></i>
+                    <h5>MySQL </h5>
+                </div>
+            </div>
+            <!-- Git & GitHub -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-git-alt fa-3x text-dark mb-3"></i>
+                    <h5>Git & GitHub</h5>
+                </div>
+            </div>
+            <!-- Docker -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fab fa-docker fa-3x text-info mb-3"></i>
+                    <h5>linux System</h5>
+                </div>
+            </div>
+            <!-- Cloud -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card text-center p-4 shadow-sm rounded bg-white">
+                    <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                    <h5>AWS / Cloud</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_head %}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}

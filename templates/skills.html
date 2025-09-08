@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Card Styling */
+    .skill-card {
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    /* Hover Effect */
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Icon Bounce */
+    .skill-card i {
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover i {
+      transform: scale(1.2) rotate(8deg);
+      animation: bounce 0.6s;
+    }
+
+    /* Bounce Keyframes */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skills Section -->
+  <section class="py-5 bg-light" id="skills">
+    <div class="container text-center">
+      <h2 class="mb-4"><i class="fas fa-lightbulb text-warning"></i> My Skills</h2>
+      <p class="text-muted mb-5">Technologies, tools & platforms I work with</p>
+
+      <div class="row g-4">
+
+        <!-- Python / Flask -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-python fa-3x text-primary mb-3"></i>
+            <h6 class="fw-bold">Python / Flask</h6>
+          </div>
+        </div>
+
+        <!-- Flask REST API -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-plug fa-3x text-danger mb-3"></i>
+            <h6 class="fw-bold">Flask REST API</h6>
+          </div>
+        </div>
+
+        <!-- Postman -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-paper-plane fa-3x text-warning mb-3"></i>
+            <h6 class="fw-bold">Postman</h6>
+          </div>
+        </div>
+
+        <!-- HTML5 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+            <h6 class="fw-bold">HTML5</h6>
+          </div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-css3-alt fa-3x text-info mb-3"></i>
+            <h6 class="fw-bold">CSS3</h6>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-js fa-3x text-warning mb-3"></i>
+            <h6 class="fw-bold">JavaScript</h6>
+          </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-bootstrap fa-3x text-purple mb-3"></i>
+            <h6 class="fw-bold">Bootstrap</h6>
+          </div>
+        </div>
+
+        <!-- Canva -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-paint-brush fa-3x text-danger mb-3"></i>
+            <h6 class="fw-bold">Canva</h6>
+          </div>
+        </div>
+
+        <!-- Figma -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-figma fa-3x text-dark mb-3"></i>
+            <h6 class="fw-bold">Figma</h6>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-github fa-3x text-dark mb-3"></i>
+            <h6 class="fw-bold">GitHub</h6>
+          </div>
+        </div>
+
+        <!-- Linux -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-linux fa-3x text-secondary mb-3"></i>
+            <h6 class="fw-bold">Linux System</h6>
+          </div>
+        </div>
+
+        <!-- AI Tools -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-robot fa-3x text-success mb-3"></i>
+            <h6 class="fw-bold">AI Tools</h6>
+          </div>
+        </div>
+
+        <!-- VS Code -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-code fa-3x text-primary mb-3"></i>
+            <h6 class="fw-bold">VS Code</h6>
+          </div>
+        </div>
+
+        <!-- AWS Cloud -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fab fa-aws fa-3x text-warning mb-3"></i>
+            <h6 class="fw-bold">AWS Cloud</h6>
+          </div>
+        </div>
+
+        <!-- FastAPI -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-bolt fa-3x text-danger mb-3"></i>
+            <h6 class="fw-bold">FastAPI</h6>
+          </div>
+        </div>
+
+        <!-- Django -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+            <h6 class="fw-bold">Django</h6>
+          </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-database fa-3x text-info mb-3"></i>
+            <h6 class="fw-bold">MySQL</h6>
+          </div>
+        </div>
+
+        <!-- XAMPP -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-server fa-3x text-secondary mb-3"></i>
+            <h6 class="fw-bold">XAMPP / phpMyAdmin</h6>
+          </div>
+        </div>
+
+        <!-- Responsive Design -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card skill-card shadow-sm p-3 border-0">
+            <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+            <h6 class="fw-bold">Responsive Design</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
