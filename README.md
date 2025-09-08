@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flask Portfolio with Real APIs
 
 A modern, responsive Flask portfolio with real API integrations for Gmail, calling, messaging, and enhanced tech background effects.
@@ -90,3 +91,7 @@ The portfolio includes several animated tech elements:
 ## License
 
 This project is open source and available under the MIT License.
+=======
+# portfolio_rajat
+🚀 Personal Portfolio Website | Built with HTML, CSS, JavaScript, Flask   A responsive and modern portfolio to showcase my skills, projects, and experience.
+>>>>>>> ae8631ac3d8d92484a04f6bc1c324b28cc7818d4
