@@ -262,7 +262,7 @@ def ai_search():
             'results': results[:3],  # Limit to 3 results
             'query': query,
             'timestamp': datetime.now().isoformat()
-        })
+        })    
         
     except Exception as e:
         return jsonify({
